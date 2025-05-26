@@ -1,0 +1,37 @@
+paths:
+  videos:
+    - plushki_bogdan.mp4
+    - youtube_ejc5zic4q2A_1920x1080_h264.mp4
+#    - youtube_kA-PgYK3msU_1920x1080_h264.mp4
+#    - youtube_teGEnckTI40_1920x1080_h264.mp4
+#    - youtube_I4Ea7pcOODs_1920x960_h264.mp4
+  whisper_dir: whispers
+  transcript_dir: transcripts
+  output_dir: output
+queue:
+  enabled: true
+  items: []
+download:
+  output_dir: downloads
+pipeline:
+  min_duration: 30.0
+  top_n: 15
+  center_mode: auto
+  subtitles: true
+  sub_fontsize: 50
+  sub_font: Arial-Bold
+  sub_color: white
+  sub_stroke_color: black
+  sub_stroke_width: 1
+  sub_position:
+  - center
+  - 0.8
+pause:
+  min_silence: 3.5
+  top_db: 40
+semantic:
+  threshold: 0.6
+  merge_window: 10.0
+whisper:
+  model: medium
+  word_timestamps: true
